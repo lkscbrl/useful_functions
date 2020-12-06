@@ -1,2 +1,3 @@
 # useful_functions
-Minhas funções
+
+Repositório com minhas funções customizadas
