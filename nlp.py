@@ -1,12 +1,14 @@
-def quebra(text, sep=' '):
+import re
+
+def text_split(text, sep=' '):
   
   return text.split(sep)
   
-def unir(text, sep=' '):
+def text_join(text, sep=' '):
   
   return sep.join(text)
 
-def duplicatas(text):
+def remove_duplicates(text):
 
   return list(dict.fromkeys(text))
 
@@ -20,6 +22,13 @@ def remove_stopwords(text, stop_words):
 
   return filtered_text
 
-def remove_whitespace(text):
+def remove_extra_whitespaces(text):
 
   return ' '.join(text.split())
+
+def stemming(text):
+  
+  splits = re.findall(r'^{.*?}{}?$', text)
+  stem = splits[0][0]
+  
+  return stem
