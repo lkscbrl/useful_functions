@@ -28,7 +28,7 @@ def remove_extra_whitespaces(text):
 
 def stemming(text, sufixes='ada|anca|ancia|cao|dao|enca|ez|eza|ismo|mento|sao|tude|ura|ario|aria|eiro|eira|ista|or|nte'):
   
-  splits = re.findall(r'^{.*?}{sufixes}?$', text)
+  splits = re.findall(r'^{.*?}{' + sufixes + '}?$', text)
   stem = splits[0][0]
   
   return stem
